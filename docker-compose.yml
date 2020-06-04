@@ -1,0 +1,14 @@
+version: "3.2"
+services:
+  rabbitmq:
+    image: "rabbitmq:3.8.2-management"
+    ports:
+      - target: 5672
+        published: 5672
+        mode: host
+      - target: 15672
+        published: 15672
+        mode: host
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=password
